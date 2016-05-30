@@ -1,0 +1,287 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.LWA.lewis.taxcalculator.ResultActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="#ffd2fff8"
+        android:paddingLeft="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:id="@+id/llsomething">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/tax_calculator"
+            android:layout_weight="0.10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tax Calculator"
+            android:id="@+id/textView2"
+            android:paddingTop="20dp"
+            android:paddingLeft="3dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:background="#fffdfdfd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Annual Salary"
+            android:id="@+id/textView8"
+            android:singleLine="true"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView9"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:background="#fffdfdfd">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView2"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Salary"
+                    android:id="@+id/textView7"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="16dp"
+                    android:clickable="true"
+                    android:onClick="onLblSalaryBreakClick"
+                    android:background="#fff5f5f5"
+                    android:paddingBottom="17dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher"
+                    android:clickable="true"
+                    android:onClick="onSSListener" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Basic Tax"
+                    android:id="@+id/textView17"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="17dp"
+                    android:clickable="true"
+                    android:onClick="onBasicTaxClick"
+                    android:nestedScrollingEnabled="false"
+                    android:background="#fffbfbfb"
+                    android:paddingBottom="17dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher4"
+                    android:clickable="true"
+                    android:onClick="onBTClick" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Personal Allowance"
+                    android:id="@+id/textView6"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="16dp"
+                    android:clickable="true"
+                    android:onClick="onLblPAClick"
+                    android:background="#fff5f5f5"
+                    android:paddingBottom="17dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher7"
+                    android:clickable="false" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Student Loan\nRepayments"
+                    android:id="@+id/textView4"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="5dp"
+                    android:clickable="true"
+                    android:onClick="onStudentLoanClick"
+                    android:nestedScrollingEnabled="false"
+                    android:background="#fff5f5f5"
+                    android:paddingBottom="5dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher5"
+                    android:clickable="true"
+                    android:onClick="onSSwitcherClick" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView"
+            android:layout_weight="1"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Total Salary\nDeductions"
+                    android:id="@+id/textView3"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="5dp"
+                    android:clickable="true"
+                    android:onClick="onLblTaxDeductionClick"
+                    android:background="#fffdfdfd"
+                    android:paddingBottom="5dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher2"
+                    android:clickable="true"
+                    android:onClick="onTTClick"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="National Insurance\nContributions"
+                    android:id="@+id/textView15"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="5dp"
+                    android:clickable="true"
+                    android:onClick="onNIClick"
+                    android:background="#fff3f3f3"
+                    android:paddingBottom="5dp"
+                    android:autoText="false" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher3"
+                    android:clickable="true"
+                    android:onClick="onNISwitcherClick" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Higher Tax"
+                    android:id="@+id/textView5"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="17dp"
+                    android:clickable="true"
+                    android:onClick="onLblHigherTaxClick"
+                    android:background="#fffdfdfd"
+                    android:paddingBottom="17dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher6"
+                    android:clickable="true"
+                    android:onClick="onHTSwitcherClick"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Additional Tax"
+                    android:id="@+id/textView10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:paddingTop="17dp"
+                    android:clickable="true"
+                    android:onClick="onLblATClick"
+                    android:background="#fff3f3f3"
+                    android:paddingBottom="17dp" />
+
+                <TextSwitcher
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSwitcher8"
+                    android:clickable="true"
+                    android:onClick="onATSwitcherClick"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
